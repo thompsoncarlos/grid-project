@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <title>MB for Frontend Developers</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="import" href="./components/Header/header.js">
+    <link rel="import" href="./components/Product/products.js">
   </head>
 
   <body>
@@ -31,6 +33,7 @@
           </div>
         </nav>
       </div>
+      <!-- <mb-header></mb-header> -->
     </header>
 
     <main class="mb-content">
@@ -44,11 +47,7 @@
         />
       </section>
 
-      <section class="products-content">
-        <div class="products">
-          <!-- Products load with list.json -->
-        </div>
-      </section>
+      <mb-products></mb-products>
 
       <section class="mb-smaller-width" hidden=true>
         <p>I look much better in a wide window ;)</p>
@@ -59,6 +58,7 @@
       FE Challenge by Carlos Thompson
     </footer>
 
-    <script src="./index.js"></script>
+    <script src="./components/Product/products.js"></script>
+    <!-- <script src="index.js"></script> -->
   </body>
 </html>

@@ -81,8 +81,6 @@ Feel free to use your tools of choice regarding serving/reloading/bundling packa
 
 ## Requirements
 
-### Junior Developers *and* Frontend Heroes
-
 1. HTML markup
     - Please add to the existing src/index.html file the semantic markup needed to achieve the required design and planned behavior.
       - Depending on your implementation (regarding modularization/componentization) you may chose to have some Html in partials outside of index.html. If that's case (which is fine) we would still like you to add at least the base structural elements (eg: header, footer, etc) in the base index.html file.
