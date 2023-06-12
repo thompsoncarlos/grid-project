@@ -146,6 +146,7 @@ html {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
+  row-gap: 40px;
 }
 
 .product {
@@ -199,4 +200,32 @@ html {
   color: var(--text-color-second);
   width: 918px;
   margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  body {
+    background-color: var(--bg-header);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .mb-smaller-width {
+    display: contents;
+    color: var(--text-color-main);
+    /* color: var(--text-color-contrast); */
+  }
+  
+  .mb-header {
+    display: none;
+  }
+
+  .mb-content {
+    display: none;
+  }
+
+  .mb-footer {
+    display: none;
+  }
+
 }
