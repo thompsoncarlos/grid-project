@@ -1,0 +1,22 @@
+.product-search__container {
+  width: 918px;
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-search__title {
+  font-size: 24px;
+  color: var(--text-color-main);
+  font-weight: lighter;
+}
+
+.product-search__input-search {
+  font-size: 14px;
+  color: var(--text-color-main);
+  border: 1px solid var(--text-color-second); 
+  /* Todo: Check if var color identity can be better */
+  width: 220px;
+  height: 35px;
+  padding: 0 20px;
+}

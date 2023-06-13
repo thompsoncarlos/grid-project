@@ -4,61 +4,28 @@
     <meta charset="UTF-8" />
     <title>MB for Frontend Developers</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="import" href="./components/Header/header.js">
-    <link rel="import" href="./components/Product/products.js">
+    <script src="./components/Header/header.js"></script>
+    <script src="./components/ProductSearch/product-search.js"></script>
+    <script src="./components/Product/products.js"></script>
+    <script src="./components/SmallerWidth/smaller-width.js"></script>
   </head>
 
   <body>
     <!-- Your Semantic Html here -->
     <header class="mb-header">
-      <div class="mb-header__wrapper">
-        <nav class="mb-header__top">
-          <div class="mb-header__logo-and-wordmark">
-            <div class="mb-header__logo-wrapper">
-              <img src="./assets/mb-star.svg" class="mb-header__star" alt="Mercedes-Benz Logo" />
-            </div>
-            <div class="mb-header__wordmark-wrapper">
-              <img class="mb-header__wordmark" src="./assets/mb-wordmark.svg" alt="Mercedes-Benz Logo Text">
-            </div>
-          </div>
-          <div class="mb-header__top-menu-tools">
-            <div data-name="price-input" class="mb-header__price">59.000,00 €</div>
-            <div class="mb-header__item-container">
-              <img
-                class="mb-header__item-cart"
-                src="./assets/shoppingBag.png"
-                alt="Shopping Bag icon"
-              />
-            </div>
-          </div>
-        </nav>
-      </div>
-      <!-- <mb-header></mb-header> -->
+      <mb-header></mb-header>
     </header>
 
     <main class="mb-content">
-
-      <section class="product-search__container">
-        <h1 class="product-search__title">Cars In Stock</h1>
-        <input
-          class="product-search__input-search"
-          type="text"
-          placeholder="Type to Filter..."
-        />
-      </section>
+      <mb-product-search></mb-product-search>
 
       <mb-products></mb-products>
 
-      <section class="mb-smaller-width" hidden=true>
-        <p>I look much better in a wide window ;)</p>
-      </section>
+      <mb-smaller-width></mb-smaller-width>
     </main>
 
     <footer class="mb-footer">
       FE Challenge by Carlos Thompson
     </footer>
-
-    <script src="./components/Product/products.js"></script>
-    <!-- <script src="index.js"></script> -->
   </body>
 </html>

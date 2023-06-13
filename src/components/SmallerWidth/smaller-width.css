@@ -1,0 +1,26 @@
+@media (max-width: 1024px) {
+  body {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .mb-smaller-width  p{
+    display: contents;
+    color: gold;
+    z-index: 1;
+  }
+  
+  .mb-header {
+    display: none;
+  }
+
+  .mb-content {
+    display: none;
+  }
+
+  .mb-footer {
+    display: none;
+  }
+}
