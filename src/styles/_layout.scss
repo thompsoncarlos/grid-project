@@ -1,0 +1,18 @@
+.mb-header {
+position: relative;
+width: 100%;
+background-color: $bg-header;
+z-index: 33;
+}
+
+.mb-content {
+width: 1024px;
+margin: 0 auto;
+}
+
+.mb-footer {
+font-size: 12px;
+color: $color-secondary;
+width: 918px;
+margin: 0 auto;
+}

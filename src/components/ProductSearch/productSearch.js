@@ -5,7 +5,8 @@ class ProductSearch extends HTMLElement {
 
     const linkElem = document.createElement('link')
     linkElem.setAttribute('rel', 'stylesheet')
-    linkElem.setAttribute('href', 'components/ProductSearch/product-search.css')
+    linkElem.setAttribute('href', './styles.css')
+    // linkElem.setAttribute('href', 'components/ProductSearch/product-search.scss')
 
     const template = document.createElement("template")
     template.innerHTML = `

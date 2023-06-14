@@ -5,7 +5,8 @@ class SmallerWidth extends HTMLElement {
 
     const linkElem = document.createElement('link')
     linkElem.setAttribute('rel', 'stylesheet')
-    linkElem.setAttribute('href', 'components/SmallerWidth/smaller-width.css')
+    linkElem.setAttribute('href', './styles.css')
+    // linkElem.setAttribute('href', 'components/SmallerWidth/smaller-width.scss')
 
     const template = document.createElement("template")
     template.innerHTML = `

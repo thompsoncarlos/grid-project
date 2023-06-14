@@ -1,4 +1,10 @@
 @charset "UTF-8";
 
 @import 'styles/base';
-@import 'components/SmallerWidth/smaller-width';
+@import 'styles/variables';
+@import 'styles/layout';
+
+@import 'components/Header/header';
+@import 'components/ProductSearch/productSearch';
+@import 'components/Product/products';
+@import 'components/SmallerWidth/smallerWidth';

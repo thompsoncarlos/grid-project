@@ -5,7 +5,8 @@ class Products extends HTMLElement {
 
     const linkElem = document.createElement('link')
     linkElem.setAttribute('rel', 'stylesheet')
-    linkElem.setAttribute('href', 'components/Product/products.css')
+    linkElem.setAttribute('href', './styles.css')
+    // linkElem.setAttribute('href', 'components/Product/products.scss')
 
     const template = document.createElement("template")
     template.innerHTML = `
