@@ -176,11 +176,25 @@ html {
   padding: 15px;
 }
 
-.product-button {
+.product-button-add {
   font-size: 16px;
   width: 100%;
   background-color: #3c3c3c;
   color: #fff;
+  border: none;
+  padding: 5px 31px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.product-button-remove {
+  font-size: 16px;
+  width: 100%;
+  background-color: #3c3c3c;
+  color: #999;
   border: none;
   padding: 5px 31px;
   display: flex;

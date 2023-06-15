@@ -2,26 +2,246 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>MB for Frontend Developers</title>
+    <title>Mercedes-Benz.io Challenge for Frontend Developers</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="./components/Header/header.js"></script>
-    <script src="./components/ProductSearch/productSearch.js"></script>
-    <script src="./components/Product/products.js"></script>
-    <script src="./components/SmallerWidth/smallerWidth.js"></script>
+    <script src="index.js"></script>
   </head>
 
   <body>
     <!-- Your Semantic Html here -->
     <header class="mb-header">
-      <mb-header></mb-header>
+      <div class="mb-header__wrapper">
+        <nav class="mb-header__top">
+          <div class="mb-header__logo-and-wordmark">
+            <div class="mb-header__logo-wrapper">
+              <img src="./assets/mb-star.svg" class="mb-header__star" alt="Mercedes-Benz Logo" />
+            </div>
+            <div class="mb-header__wordmark-wrapper">
+              <img class="mb-header__wordmark" src="./assets/mb-wordmark.svg" alt="Mercedes-Benz Logo Text">
+            </div>
+          </div>
+          <div class="mb-header__top-menu-tools">
+            <div data-name="price-input" class="mb-header__price"><span id="total-value">0.00 </span>€</div>
+            <div class="mb-header__item-container">
+              <img
+                class="mb-header__item-cart"
+                src="./assets/shoppingBag.png"
+                alt="Shopping Bag icon"
+              />
+            </div>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <main class="mb-content">
-      <mb-product-search></mb-product-search>
 
-      <mb-products></mb-products>
+      <section class="product-search__container">
+        <h1 class="product-search__title">Cars In Stock</h1>
+        <input
+          class="product-search__input-search"
+          type="text"
+          placeholder="Type to Filter..."
+        />
+      </section>
 
-      <mb-smaller-width></mb-smaller-width>
+      <section class="products-content">
+        <div class="products">
+          <article class="product">
+            <h2 class="product-header">A200</h2>
+            <img class="product-image" src="./assets/carImages/aclasswhite.jpg" alt="">
+              <p class="product-price">29.500,00 €</p>
+              <button
+                class="product-button-remove"
+                onclick="subtoQuantity(0);"
+                aria-label="Less One Quantity"
+                >Remove from Shopping Bag
+              </button>
+              <input
+                class="product-quantity"
+                id="quantity1"
+                onchange="applyQuantity(this.value , 0)"
+                value="0"
+                hidden="true"
+              />
+              <button
+                class="product-button-add"
+                onclick="addtoQuantity(0);"
+                aria-label="Plus One Quantity"
+                id="remove_button"
+              >
+                Add to Shopping Bag
+              </button>
+            <span class="product-price">
+              <script>
+                document.write(prices[0].toFixed(2));
+              </script>
+              €
+            </span>
+          </article>
+
+          <article class="product">
+            <h2 class="product-header">A200</h2>
+            <img class="product-image" src="./assets/carImages/aclasssilver.jpg" alt="">
+            <p class="product-price">0.00 €</p>
+            <button
+              class="product-button-remove"
+              onclick="subtoQuantity(1);"
+              aria-label="Less One Quantity"
+              >Remove from Shopping Bag
+            </button>
+            <input
+              class="product-quantity"
+              id="quantity2"
+              onchange="applyQuantity(this.value , 1)"
+              value="0"
+              hidden="true"
+            />
+            <button
+              class="product-button-add"
+              onclick="addtoQuantity(1);"
+              aria-label="Plus One Quantity"
+            >
+              Add to Shopping Bag
+            </button>
+            <span class="product-price">
+              <script>
+                document.write(prices[1].toFixed(2));
+              </script>
+              €
+            </span>
+          </article>
+
+          <article class="product">
+            <h2 class="product-header">A200</h2>
+            <img class="product-image" src="./assets/carImages/aclassred.jpg" alt="">
+            <p class="product-price">0.00 €</p>
+            <button
+              class="product-button-remove"
+              onclick="subtoQuantity(2);"
+              aria-label="Less One Quantity"
+              >Remove from Shopping Bag
+            </button>
+            <input
+              class="product-quantity"
+              id="quantity3"
+              onchange="applyQuantity(this.value , 2)"
+              value="0"
+              hidden="true"
+            />
+            <button
+              class="product-button-add"
+              onclick="addtoQuantity(2);"
+              aria-label="Plus One Quantity"
+            >
+              Add to Shopping Bag
+            </button>
+            <span class="product-price">
+              <script>
+                document.write(prices[2].toFixed(2));
+              </script>
+              €
+            </span>
+          </article>
+
+          <article class="product">
+            <h2 class="product-header">A200</h2>
+            <img class="product-image" src="./assets/carImages/aclassred.jpg" alt="">
+            <p class="product-price">0.00 €</p>
+            <button
+              class="product-button-remove"
+              onclick="subtoQuantity(3);"
+              aria-label="Less One Quantity"
+              >Remove from Shopping Bag
+            </button>
+            <input
+              class="product-quantity"
+              id="quantity4"
+              onchange="applyQuantity(this.value , 3)"
+              value="0"
+              hidden="true"
+            />
+            <button
+              class="product-button-add"
+              onclick="addtoQuantity(3);"
+              aria-label="Plus One Quantity"
+            >
+              Add to Shopping Bag
+            </button>
+            <span class="product-price">
+              <script>
+                document.write(prices[3].toFixed(2));
+              </script>
+              €
+            </span>
+          </article>
+
+          <article class="product">
+            <h2 class="product-header">A200</h2>
+            <img class="product-image" src="./assets/carImages/aclasssilver.jpg" alt="">
+            <p class="product-price">0.00 €</p>
+            <button
+              class="product-button-remove"
+              onclick="subtoQuantity(4);"
+              aria-label="Less One Quantity"
+              >Remove from Shopping Bag
+            </button>
+            <input
+              class="product-quantity"
+              id="quantity5"
+              onchange="applyQuantity(this.value , 4)"
+              value="0"
+              hidden="true"
+            />
+            <button
+              class="product-button-add"
+              onclick="addtoQuantity(4);"
+              aria-label="Plus One Quantity"
+            >
+              Add to Shopping Bag
+            </button>
+            <span class="product-price">
+              <script>
+                document.write(prices[4].toFixed(2));
+              </script>
+              €
+            </span>
+          </article>
+
+          <article class="product">
+            <h2 class="product-header">A200</h2>
+            <img class="product-image" src="./assets/carImages/aclasswhite.jpg" alt="">
+            <p class="product-price">0.00 €</p>
+            <button
+              class="product-button-remove"
+              onclick="subtoQuantity(5);"
+              aria-label="Less One Quantity"
+              >Remove from Shopping Bag
+              </button>
+              <input
+              class="product-quantity"
+              id="quantity6"
+              onchange="applyQuantity(this.value , 5)"
+              value="0"
+              hidden="true"
+            />
+            <button
+              class="product-button-add"
+              onclick="addtoQuantity(5);"
+              aria-label="Plus One Quantity"
+            >
+              Add to Shopping Bag
+            </button>
+            <span class="product-price">
+              <script>
+                document.write(prices[5].toFixed(2));
+              </script>
+              €
+            </span>
+          </article>
+        </div>
+      </section>
+
     </main>
 
     <footer class="mb-footer">

@@ -45,11 +45,25 @@
     padding: 15px;
   }
 
-  &-button{
+  &-button-add{
     font-size: 16px;
     width: 100%;
     background-color: $bg-button;
-    color: $bg-product-add;
+    color: $color-contrast;
+    border: none;
+    padding: 5px 31px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &-button-remove{
+    font-size: 16px;
+    width: 100%;
+    background-color: $bg-button;
+    color: $color-secondary;
     border: none;
     padding: 5px 31px;
     display: flex;
