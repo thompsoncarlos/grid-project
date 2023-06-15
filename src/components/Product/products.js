@@ -6,69 +6,48 @@ class Products extends HTMLElement {
     const linkElem = document.createElement('link')
     linkElem.setAttribute('rel', 'stylesheet')
     linkElem.setAttribute('href', './styles.css')
-    // linkElem.setAttribute('href', 'components/Product/products.scss')
 
-    const template = document.createElement("template")
-    template.innerHTML = `
+    let template = document.createElement("template")
+    let http = new XMLHttpRequest();
 
-      <section class="products-content">
-        <div class="products">
-          <article class="product">
-            <h2 class="product-header">A200</h2>
-            <img class="product-image" src="./assets/carImages/aclasswhite.jpg" alt="">
-            <div class="product-container">
-              <p class="product-price">29.500,00 €</p>
-              <button class="product-button">Add to Shopping Bag</button>
-            </div>
-          </article>
+    http.open('get', '/mocks/list.json', true);
+    http.send();
 
-          <article class="product">
-            <h2 class="product-header">A200</h2>
-            <img class="product-image" src="./assets/carImages/aclasssilver.jpg" alt="">
-            <div class="product-container">
-              <p class="product-price">29.500,00 €</p>
-              <button class="product-button">Add to Shopping Bag</button>
-            </div>
-          </article>
+    http.onload = function () {
+      if (this.readyState == 4  && this.status == 200 ) {
+        let products = JSON.parse(this.responseText);
+        console.log(products)
 
-          <article class="product">
-            <h2 class="product-header">A200</h2>
-            <img class="product-image" src="./assets/carImages/aclassred.jpg" alt="">
-            <div class="product-container">
-              <p class="product-price">29.500,00 €</p>
-              <button class="product-button">Add to Shopping Bag</button>
-            </div>
-          </article>
+        for(let item of products) {
+          template += `
+            <article class="product">
+              <h2 class="product-header">${item.name}</h2>
+              <img class="product-image" src="${item.imagePath}" alt="">
+              <div class="product-container">
+                <p class="product-price">${item.priceFormatted}</p>
+                <button class="product-button">Add to Shopping Bag</button>
+              </div>
+            </article>
+          `
+        }
+        
+        // products.forEach( item => {
+        //   template.innerHTML = `
+        //   <article class="product">
+        //       <h2 class="product-header">${item.name}</h2>
+        //       <img class="product-image" src="${item.imagePath}" alt="">
+        //       <div class="product-container">
+        //         <p class="product-price">${item.priceFormatted}</p>
+        //         <button class="product-button">Add to Shopping Bag</button>
+        //       </div>
+        //     </article>
+        //   `
+        // })
 
-          <article class="product">
-            <h2 class="product-header">A200</h2>
-            <img class="product-image" src="./assets/carImages/aclassred.jpg" alt="">
-            <div class="product-container">
-              <p class="product-price">29.500,00 €</p>
-              <button class="product-button">Add to Shopping Bag</button>
-            </div>
-          </article>
+        document.querySelector(".products").innerHTML = template;
+      }
+    }
 
-          <article class="product">
-            <h2 class="product-header">A200</h2>
-            <img class="product-image" src="./assets/carImages/aclasssilver.jpg" alt="">
-            <div class="product-container">
-              <p class="product-price">29.500,00 €</p>
-              <button class="product-button">Add to Shopping Bag</button>
-            </div>
-          </article>
-
-          <article class="product">
-            <h2 class="product-header">A200</h2>
-            <img class="product-image" src="./assets/carImages/aclasswhite.jpg" alt="">
-            <div class="product-container">
-              <p class="product-price">29.500,00 €</p>
-              <button class="product-button">Add to Shopping Bag</button>
-            </div>
-          </article>
-        </div>
-      </section>
-    `
     shadowDOM.appendChild(linkElem)
     shadowDOM.append(template.content.cloneNode(true))
   }
