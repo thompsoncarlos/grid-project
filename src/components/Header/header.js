@@ -6,7 +6,6 @@ class Header extends HTMLElement {
     const linkElem = document.createElement('link')
     linkElem.setAttribute('rel', 'stylesheet')
     linkElem.setAttribute('href', './styles.css')
-    // linkElem.setAttribute('href', './components/Header/header.scss')
 
     const template = document.createElement("template");
     template.innerHTML = `
@@ -21,7 +20,7 @@ class Header extends HTMLElement {
             </div>
           </div>
           <div class="mb-header__top-menu-tools">
-            <div data-name="price-input" class="mb-header__price">59.000,00 €</div>
+            <div data-name="price-input" class="mb-header__price"><span id="total-value">0.00 </span>€</div>
             <div class="mb-header__item-container">
               <img
                 class="mb-header__item-cart"
