@@ -13,10 +13,10 @@ class Header extends HTMLElement {
         <nav class="mb-header__top">
           <div class="mb-header__logo-and-wordmark">
             <div class="mb-header__logo-wrapper">
-              <img src="./assets/mb-star.svg" class="mb-header__star" alt="Mercedes-Benz Logo" />
+              <img src="./assets/mb-star.svg" class="mb-header__star" alt="MB Logo" />
             </div>
             <div class="mb-header__wordmark-wrapper">
-              <img class="mb-header__wordmark" src="./assets/mb-wordmark.svg" alt="Mercedes-Benz Logo Text">
+              <img class="mb-header__wordmark" src="./assets/mb-wordmark.svg" alt="MB Logo Text">
             </div>
           </div>
           <div class="mb-header__top-menu-tools">
