@@ -16,13 +16,8 @@ class Products extends HTMLElement {
             <h2 class="product-header">A200</h2>
             <img class="product-image" src="./assets/carImages/aclasswhite.jpg" alt="">
             <div class="product-container">
-            <p class="product-price">
-            <script>
-              document.write(prices[0].toFixed(2));
-            </script>
-            €
-          </p>
-              <button class="product-button" onclick="addtoQuantity(0)">Add to Shopping Bag</button>
+              <p class="product-price">29.500,50 €</p>
+              <button class="product-button"></button>
             </div>
           </article>
 
